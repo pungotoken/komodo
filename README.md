@@ -1,7 +1,3 @@
-[![Build Status](https://travis-ci.org/KomodoPlatform/komodo.svg?branch=dev)](https://travis-ci.org/KomodoPlatform/komodo)
----
-![Komodo Logo](https://i.imgur.com/vIwVtqv.png "Komodo Logo")
-
 
 ## Pungotoken
 
@@ -118,7 +114,7 @@ rpcport=46705
 #### Start PGT
 
 ```
-~/.komodo/komodod -ac_name=PGT -ac_supply=10000000 -ac_end=1
+~/komodo/komodod -ac_name=PGT -ac_supply=10000000 -ac_end=1
 ```
 
 License
@@ -128,24 +124,6 @@ For license information see the file [COPYING](COPYING).
 **NOTE TO EXCHANGES:**
 https://bitcointalk.org/index.php?topic=1605144.msg17732151#msg17732151
 There is a small chance that an outbound transaction will give an error due to mismatched values in wallet calculations. There is a -exchange option that you can run komodod with, but make sure to have the entire transaction history under the same -exchange mode. Otherwise you will get wallet conflicts.
-
-**To change modes:**
-
-a) backup all privkeys (launch komodod with `-exportdir=<path>` and `dumpwallet`)  
-b) start a totally new sync including `wallet.dat`, launch with same `exportdir`  
-c) stop it before it gets too far and import all the privkeys from a) using `komodo-cli importwallet filename`  
-d) resume sync till it gets to chaintip  
-
-For example:
-```shell
-./komodod -exportdir=/tmp &
-./komodo-cli dumpwallet example
-./komodo-cli stop
-mv ~/.komodo ~/.komodo.old && mkdir ~/.komodo && cp ~/.komodo.old/komodo.conf ~/.komodo.old/peers.dat ~/.komodo
-./komodod -exchange -exportdir=/tmp &
-./komodo-cli importwallet /tmp/example
-```
----
 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
