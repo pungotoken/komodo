@@ -3,23 +3,14 @@
 ![Komodo Logo](https://i.imgur.com/vIwVtqv.png "Komodo Logo")
 
 
-## Komodo
+## Pungotoken
 
-This is the official Komodo sourcecode repository based on https://github.com/jl777/komodo. 
+This based on code from official Komodo sourcecode repository on https://github.com/jl777/komodo. 
 
 ## Development Resources
 
-- Komodo Website: [https://komodoplatform.com](https://komodoplatform.com/)
-- Komodo Blockexplorer: [https://kmdexplorer.io](https://kmdexplorer.io/)
-- Komodo Discord: [https://komodoplatform.com/discord](https://komodoplatform.com/discord)
-- Forum: [https://forum.komodoplatform.com](https://forum.komodoplatform.com/)
-- Mail: [info@komodoplatform.com](mailto:info@komodoplatform.com)
-- Support: [https://support.komodoplatform.com/support/home](https://support.komodoplatform.com/support/home)
-- Knowledgebase & How-to: [https://support.komodoplatform.com/en/support/solutions](https://support.komodoplatform.com/en/support/solutions)
-- API references & Dev Documentation: [https://docs.komodoplatform.com](https://docs.komodoplatform.com/)
-- Blog: [https://blog.komodoplatform.com](https://blog.komodoplatform.com/)
-- Whitepaper: [Komodo Whitepaper](https://komodoplatform.com/whitepaper)
-- Komodo Platform public material: [Komodo Platform public material](https://docs.google.com/document/d/1AbhWrtagu4vYdkl-vsWz-HSNyNvK-W-ZasHCqe7CZy0)
+- PungoToken Website: [https://pungotoken.com](https://pungotoken.com/)
+- PungoToken Blockexplorer: [https://pgt.komodo.build](https://pgt.komodo.build)
 
 ## List of Komodo Platform Technologies
 
@@ -101,44 +92,34 @@ cd komodo
 
 To reset the Komodo blockchain change into the *~/.komodo* data directory and delete the corresponding files by running `rm -rf blocks chainstate debug.log komodostate db.log`
 
-#### Create komodo.conf
+#### Create PGT.conf
 
-Create a komodo.conf file:
+Create a PGT.conf file:
 
 ```
 mkdir ~/.komodo
-cd ~/.komodo
-touch komodo.conf
+mkdir ~/.komodo/PGT
+cd ~/.komodo/PGT
+touch PGT.conf
 
 #Add the following lines to the komodo.conf file:
 rpcuser=yourrpcusername
 rpcpassword=yoursecurerpcpassword
 rpcbind=127.0.0.1
 txindex=1
-addnode=5.9.102.210
-addnode=78.47.196.146
-addnode=178.63.69.164
-addnode=88.198.65.74
-addnode=5.9.122.241
-addnode=144.76.94.38
-addnode=89.248.166.91
-```
-### Create your own Blockchain based on Komodo
-
-Komodo allows anyone to create a runtime fork which represents an independent Blockchain. Below are the detailed instructions:
-Setup two independent servers with at least 1 server having a static IP and build komodod on those servers.  
-
-#### On server 1 (with static IP) run:
-```shell
-./komodod -ac_name=name_of_your_chain -ac_supply=100000 -bind=ip_of_server_1 &
+addnode=188.166.73.124
+addnode=190.114.254.103
+addnode=190.114.254.104
+addnode=94.237.45.44
+rpcport=46705
 ```
 
-#### On server 2 run:
-```shell
-./komodod -ac_name=name_of_your_chain -ac_supply=100000 -addnode=ip_of_server_1 -gen &
-```
 
-**Komodo is based on Zcash which is unfinished and highly experimental.** Use at your own risk.
+#### Start PGT
+
+```
+~/.komodo/komodod -ac_name=PGT -ac_supply=10000000 -ac_end=1
+```
 
 License
 -------
