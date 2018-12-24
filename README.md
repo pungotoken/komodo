@@ -1,3 +1,4 @@
+![Pungo Token](https://pungotoken.sale/images/token_logo.png)
 
 ## Pungotoken
 
@@ -6,31 +7,11 @@ This based on code from official Komodo sourcecode repository on https://github.
 ## Development Resources
 
 - PungoToken Website: [https://pungotoken.com](https://pungotoken.com/)
-- PungoToken Blockexplorer: [https://pgt.komodo.build](https://pgt.komodo.build)
+- PungoToken Blockexplorer: [https://explorer.pungotoken.build](https://explorer.pungotoken.com)
+- PungoToken Telegram: [https://t.me/pungotalk](https://t.me/pungotalk)
+- PungoToken Node Addresses:  190.114.254.103, 190.114.254.104
+- PungoToken Electrum Servers Addresses: agama.komdo.build:10001 agama2.komodo.build:10001
 
-## List of Komodo Platform Technologies
-
-- Delayed Proof of Work (dPoW) - Additional security layer and Komodos own consensus algorithm  
-- zk-SNARKs - Komodo Platform's privacy technology for shielded transactions  
-- Tokens/Assets Technology - create "colored coins" on the Komodo Platform and use them as a layer for securites  
-- Reward API - Komodo CC technology for securities  
-- CC - Crypto Conditions to realize "smart contract" logic on top of the Komodo Platform  
-- Jumblr - Decentralized tumbler for KMD and other cryptocurrencies  
-- Assetchains - Create your own Blockchain that inherits all Komodo Platform functionalities and blockchain interoperability  
-- Pegged Assets - Chains that maintain a peg to fiat currencies  
-- Peerchains - Scalability solution where sibling chains form a network of blockchains  
-- More in depth covered [here](https://docs.google.com/document/d/1AbhWrtagu4vYdkl-vsWz-HSNyNvK-W-ZasHCqe7CZy0)  
-- Also note you receive 5% Active User Reward on your balance.  
-[See this article for more details](https://support.komodoplatform.com/en/support/solutions/articles/29000024515-how-to-claim-the-kmd-active-user-reward-in-agama)
-
-## Tech Specification
-- Max Supply: 200 million KMD
-- Block Time: 1m 2s
-- Block Reward: 3 KMD
-- Mining Algorithm: Equihash
-
-## About this Project
-Komodo is based on Zcash and has been extended by our innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR, our assetchain capabilities (one click plug and play blockchain solutions) and a set of financial decentralization and interoperability technologies. More details are available under https://komodoplatform.com/ and https://blog.komodoplatform.com.
 
 ## Getting started
 
@@ -50,7 +31,7 @@ Komodo builds for all operating systems out of the same codebase. Follow the OS 
 
 #### Linux
 ```shell
-git clone https://github.com/komodoplatform/komodo --branch master --single-branch
+git clone https://github.com/pungotoken/komodo.git --branch master --single-branch
 cd komodo
 ./zcutil/fetch-params.sh
 # -j8 = using 8 threads for the compilation - replace 8 with number of threads you want to use
@@ -62,7 +43,7 @@ cd komodo
 Ensure you have [brew](https://brew.sh) and the command line tools installed (comes automatically with XCode) and run:
 ```shell
 brew update && brew install gcc@6
-git clone https://github.com/komodoplatform/komodo --branch master --single-branch
+git clone https://github.com/pungotoken/komodo.git --branch master --single-branch
 cd komodo
 ./zcutil/fetch-params.sh
 # -j8 = using 8 threads for the compilation - replace 8 with number of threads you want to use
@@ -77,7 +58,7 @@ sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoco
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 rustup target add x86_64-pc-windows-gnu
-git clone https://github.com/jl777/komodo --branch master --single-branch
+git clone https://github.com/pungotoken/komodo.git --branch master --single-branch
 cd komodo
 ./zcutil/fetch-params.sh
 # -j8 = using 8 threads for the compilation - replace 8 with number of threads you want to use
@@ -110,8 +91,7 @@ addnode=94.237.45.44
 rpcport=46705
 ```
 
-
-#### Start PGT
+### Start PGT
 
 ```
 ~/komodo/komodod -ac_name=PGT -ac_supply=10000000 -ac_end=1
