@@ -10,7 +10,7 @@ This based on code from official Komodo sourcecode repository on https://github.
 - PungoToken Blockexplorer: [https://explorer.pungotoken.build](https://explorer.pungotoken.com)
 - PungoToken Telegram: [https://t.me/pungotalk](https://t.me/pungotalk)
 - PungoToken Node Addresses:  190.114.254.103, 190.114.254.104
-- PungoToken Electrum Servers Addresses: agama.komdo.build:10001 agama2.komodo.build:10001
+- PungoToken Electrum Servers Addresses: agama.komodo.build:10001 agama2.komodo.build:10001
 
 
 ## Getting started
